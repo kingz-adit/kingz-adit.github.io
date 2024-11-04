@@ -244,14 +244,9 @@ body {
 }
 
 .footer {
-    position: relative;
     background: #F09319;
-    min-height: 100px;
     padding: 45px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
     font-family: Poppins;
     font-weight: 100;
     font-size: 15px;
