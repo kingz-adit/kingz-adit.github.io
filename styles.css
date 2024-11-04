@@ -16,13 +16,11 @@
 .logo-con {
     position: relative;
     width: relative;
-#    border: 1px solid green;
 }
 
 .logo {
-#    width: 7%;
     display: block;
-    height: 85px;
+    height: 70px;
 }
 
 .logo-overlay {
@@ -35,10 +33,14 @@
     width: 100%;
     height: 0;
     transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
 }
 
 .logo-text {
-    white-space: nowrap; 
+    white-space: nowrap;
     color: white;
     font-size: 18px;
     font-family: Poppins;
@@ -48,6 +50,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .logo-con:hover .logo-overlay {
@@ -57,11 +62,11 @@
 
 .nav-con {
     width: 400px
-    align-items: center;
+    align-items center;
     height: auto;
 }
 
-.nav-con, .nav-menu {
+.nav-con .nav-menu {
     border: none;
     text-decoration: none;
     background-color: none;
@@ -69,13 +74,169 @@
     color: #000;
     font-family: Poppins;
     font-size: 18px;
-    font-weight: 500px
+    font-weight: 500;
     text-align: center;
-#    border: 1px solid green;
 }
 
 .nav-menu:hover {
     font-weight: bold;
     transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
 } 
 
+.content {
+    padding: 25px 90px;
+    text-align: center;
+}
+
+.content-h1 {
+    font-family: Poppins;
+    font-size: 25px;
+}
+
+.content-p {
+    text-align: left;
+    padding: 25px 100px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.content-h2 {
+    padding: 20px 90px;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.cert-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.content-cert-1 {
+    position: relative;
+    width: auto;
+}
+
+.cert-1 {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+}
+
+.cert-1-text {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+}
+
+.content-cert-1:hover .cert-1 {
+    opacity: 0.3;
+}
+
+.content-cert-1:hover .cert-1-text {
+    opacity: 1;
+}
+
+.cert-1-text-p {
+    background-color: #F09319;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    padding: 10px 25px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.cert-1-text-a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.content-cert-2 {
+    position: relative;
+    width: auto;
+}
+
+.cert-2 {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    -webkit-backface-visibility: hidden;
+}
+
+.cert-2-text {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.content-cert-2:hover .cert-2 {
+    opacity: 0.3;
+}
+
+.content-cert-2:hover .cert-2-text {
+    opacity: 1;
+}
+
+.cert-2-text-p {
+    background-color: #F09319;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    padding: 10px 25px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.cert-2-text-a {
+    text-decoration: none;
+    color: #fff;
+}
