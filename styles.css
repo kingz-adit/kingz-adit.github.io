@@ -7,6 +7,7 @@
 }
 
 body {
+    background-color: #F3F7EC;
     overflow: hidden; 
 }
 
@@ -94,6 +95,7 @@ body {
 .content {
     padding: 25px 90px;
     text-align: center;
+    background-color: #F3F7EC;
 }
 
 .content-h1 {
@@ -112,6 +114,7 @@ body {
 
 .content-2 {
     padding: 90px 0;
+    background-color: #F3F7EC;
 }
 
 .content-h2 {
