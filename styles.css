@@ -60,6 +60,11 @@ body {
     -o-transform: translate(-50%, -50%);
 }
 
+.logo-text-a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .logo-con:hover .logo-overlay {
     bottom: 0;
     height: 100%;
