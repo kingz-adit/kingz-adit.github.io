@@ -140,9 +140,9 @@ body {
     text-decoration: none;
     font-weight: 400;
     padding: 20px;
-    color: #000;
+    color: #523209;
     font-weight: 500;
-    border: 2px solid #523209;
+    border: 2px solid #F09319;
     border-radius: 20px;
 }
 
@@ -160,9 +160,9 @@ body {
     text-decoration: none;
     font-weight: 400;
     padding: 20px;
-    color: #523209;
+    color: #000;
     font-weight: 500;
-    border: 2px solid #F09319;
+    border: 2px solid #523209;
     border-radius: 20px;
 }
 
@@ -186,8 +186,8 @@ body {
     border-radius: 20px;
 }
 
-.content-nav-a-2:hover, 
-.content-nav-a-3:hover,
+.content-nav-a-1:hover, 
+.content-nav-a-2:hover,
 .content-nav-a-4:hover,
 .content-nav-a-5:hover {
     border: 2px solid #523209;

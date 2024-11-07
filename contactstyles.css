@@ -98,9 +98,31 @@ body {
 }
 
 .content {
-    border: 1px solid;
     width: auto;
     height: 775px;
+    justify-content: center;
+    display: flex;
+}
+
+.contact {
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-a {
+    border: 1px solid;
+    padding: 20px 40px;
+    box-shadow: 8px 8px;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .footer {
