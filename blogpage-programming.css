@@ -23,6 +23,8 @@ body::-webkit-scrollbar {
     position: sticky;
     top: 0;
     overflow: hidden;
+    z-index: 9;
+    background-color: #fff;
 }
 
 .logo-con {
