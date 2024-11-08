@@ -6,9 +6,11 @@
     padding: 0;
 }
 
-body {
+body::-webkit-scrollbar {
     background-color: #F3F7EC;
-    overflow: hidden; 
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .nav {
@@ -16,6 +18,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 15px;
+    /* border: 1px solid; */
+    height: 30%;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 .logo-con {
@@ -127,9 +134,13 @@ body {
 
 .footer {
     background: #F09319;
-    padding: 45px 50px;
+    padding: 44px 50px;
     text-align: center;
     font-family: Poppins;
     font-weight: 100;
     font-size: 15px;
+    height: 30%;
+    /* border: 1px solid; */
+    /* overflow: hidden; */
+    /* position: sticky; */
 }
