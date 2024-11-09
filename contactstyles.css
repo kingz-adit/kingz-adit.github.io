@@ -394,7 +394,7 @@ body::-webkit-scrollbar {
     /* CSS content section */
     .content {
         width: auto;
-        height: 478px;
+        height: 578px;
         justify-content: center;
         display: flex;
     }
