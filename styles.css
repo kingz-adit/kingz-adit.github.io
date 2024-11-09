@@ -727,10 +727,12 @@ body::-webkit-scrollbar {
         position: relative;
     }
     
-    .cert-1 {
+    .cert-1::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
         border: 4px solid #F09319;
         opacity: 1;
-        display: block;
         transition: .5s ease;
         backface-visibility: hidden;
         -webkit-transition: .5s ease;
@@ -757,7 +759,7 @@ body::-webkit-scrollbar {
     }
     
     .content-cert-1:hover .cert-1 {
-        opacity: 0.4;
+        opacity: 0.7;
     }
     
     .content-cert-1:hover .cert-1-text {
@@ -788,10 +790,12 @@ body::-webkit-scrollbar {
         width: auto;
     }
     
-    .cert-2 {
+    .cert-2::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
         border: 4px solid #F09319;
         opacity: 1;
-        display: block;
         transition: .5s ease;
         backface-visibility: hidden;
         -webkit-transition: .5s ease;
@@ -814,7 +818,7 @@ body::-webkit-scrollbar {
     }
     
     .content-cert-2:hover .cert-2 {
-        opacity: 0.4;
+        opacity: 0.7;
     }
     
     .content-cert-2:hover .cert-2-text {
