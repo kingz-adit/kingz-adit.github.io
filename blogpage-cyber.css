@@ -117,7 +117,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     padding: 25px 0;
-    gap: 150px;
+    gap: 200px;
     background-color: #F09319;
     box-shadow: 8px 8px;
 }
