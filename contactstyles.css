@@ -108,18 +108,22 @@ body::-webkit-scrollbar {
 
 .content {
     width: auto;
-    height: 600px;
+    height: 40%;
     justify-content: center;
     display: flex;
+    /* border: 1px solid; */
+    padding: 40px ;
 }
 
 .contact {
-    width: 40%;
+    /* width: 40%; */
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    /* border: 1px solid; */
+    height: 700px;
 }
 
 .contact-a {
@@ -149,12 +153,12 @@ body::-webkit-scrollbar {
 
 @media (min-width: 481px) and (max-width: 768px) {
     body::-webkit-scrollbar {
-        background-color: #F3F7EC;
         display: none;
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-    
+
+    /* CSS navigation section */
     .nav {
         display: flex;
         justify-content: space-between;
@@ -168,17 +172,17 @@ body::-webkit-scrollbar {
         z-index: 9;
         background-color: #fff;
     }
-    
+
     .logo-con {
         position: relative;
         width: relative;
     }
-    
+
     .logo {
         display: block;
         height: 60px;
     }
-    
+
     .logo-overlay {
         position: absolute;
         bottom: 100%;
@@ -194,7 +198,7 @@ body::-webkit-scrollbar {
         -ms-transition: .5s ease;
         -o-transition: .5s ease;
     }
-    
+
     .logo-text {
         white-space: nowrap;
         color: white;
@@ -210,34 +214,34 @@ body::-webkit-scrollbar {
         -moz-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
     }
-    
+
     .logo-text-a {
         text-decoration: none;
         color: #fff;
     }
-    
+
     .logo-con:hover .logo-overlay {
         bottom: 0;
         height: 100%;
     }
-    
+
     .nav-con {
         width: 400px
         align-items center;
         height: auto;
     }
-    
+
     .nav-con .nav-menu {
+        /* border: 1px solid; */
         text-decoration: none;
-        background-color: none;
         padding: 10px 40px;
         color: #000;
         font-family: Poppins;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 500;
         text-align: center;
     }
-    
+
     .nav-menu:hover {
         font-weight: bold;
         transition: .5s ease;
@@ -246,24 +250,26 @@ body::-webkit-scrollbar {
         -ms-transition: .5s ease;
         -o-transition: .5s ease;
     }
-    
+
     .content {
         width: auto;
-        height: 468px;
+        height: 40%;
         justify-content: center;
         display: flex;
+        /* border: 1px solid; */
     }
-    
+
     .contact {
-        width: 50%;
+        /* width: 40%; */
         text-align: center;
         justify-content: center;
         align-items: center;
         display: flex;
         flex-direction: column;
         /* border: 1px solid; */
+        height: 800px;
     }
-    
+
     .contact-a {
         border: 1px solid;
         padding: 10px 30px;
@@ -275,7 +281,7 @@ body::-webkit-scrollbar {
         font-size: 15px;
         font-weight: 400;
     }
-    
+
     .footer {
         background: #F09319;
         padding: 44px 50px;
@@ -296,7 +302,7 @@ body::-webkit-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-    
+
     /* CSS navigation section */
     .nav {
         display: flex;
@@ -311,17 +317,17 @@ body::-webkit-scrollbar {
         z-index: 9;
         background-color: #fff;
     }
-    
+
     .logo-con {
         position: relative;
         width: relative;
     }
-    
+
     .logo {
         display: block;
         height: 50px;
     }
-    
+
     .logo-overlay {
         position: absolute;
         bottom: 100%;
@@ -337,7 +343,7 @@ body::-webkit-scrollbar {
         -ms-transition: .5s ease;
         -o-transition: .5s ease;
     }
-    
+
     .logo-text {
         white-space: nowrap;
         color: white;
@@ -353,34 +359,34 @@ body::-webkit-scrollbar {
         -moz-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
     }
-    
+
     .logo-text-a {
         text-decoration: none;
         color: #fff;
     }
-    
+
     .logo-con:hover .logo-overlay {
         bottom: 0;
         height: 100%;
     }
-    
+
     .nav-con {
         width: 400px
         align-items center;
         height: auto;
     }
-    
+
     .nav-con .nav-menu {
         /* border: 1px solid; */
         text-decoration: none;
         padding: 10px 25px;
         color: #000;
         font-family: Poppins;
-        font-size: 9px;
+        font-size: 13px;
         font-weight: 500;
         text-align: center;
     }
-    
+
     .nav-menu:hover {
         font-weight: bold;
         transition: .5s ease;
@@ -388,27 +394,28 @@ body::-webkit-scrollbar {
         -moz-transition: .5s ease;
         -ms-transition: .5s ease;
         -o-transition: .5s ease;
-    } 
+    }
     /*  */
-    
+
     /* CSS content section */
     .content {
         width: auto;
-        height: 678px;
+        height: 40%;
         justify-content: center;
         display: flex;
+        /* border: 1px solid; */
     }
-    
+
     .contact {
-        width: 50%;
+        /* width: 40%; */
         text-align: center;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
         display: flex;
         flex-direction: column;
         /* border: 1px solid; */
+        height: 800px;
     }
-    
+
     .contact-a {
         border: 1px solid;
         padding: 10px 5px;
@@ -417,11 +424,11 @@ body::-webkit-scrollbar {
         text-decoration: none;
         color: #000;
         font-family: Poppins;
-        font-size: 12px;
+        font-size: 9px;
         font-weight: 400;
     }
     /*  */
-    
+
     /* CSS footer section */
     .footer {
         background: #F09319;
