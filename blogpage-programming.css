@@ -113,31 +113,6 @@ body::-webkit-scrollbar {
     /* border: 1px solid; */
 }
 
-/*
-.content-nav-h1 {
-    padding: 30px 0;
-}
-
-.con-animation-h1 {
-    border-right: solid 5px #005C78;
-    white-space: nowrap;
-    overflow: hidden;    
-    font-size: 28px;
-    animation: ani-text 4s steps(29,end) 1s 1 normal both,            ani-cursor 600ms steps(29,end) infinite;
-    -webkit-animation: ani-text 4s steps(29,end) 1s 1 normal both,            ani-cursor 600ms steps(29,end) infinite;
-}
-
-@keyframes ani-text{
-    from{width: 0;}
-    to{width: 472px;}
-}
-
-@keyframes ani-cursor{
-    from{border-right-color: #005C78;}
-    to{border-right-color: transparent;}
-}
-*/
-
 .content-nav-menu {
     display: flex;
     justify-content: center;
@@ -280,7 +255,7 @@ body::-webkit-scrollbar {
     /* position: sticky; */
 }
 
-@media (min-width: 1147px) and (max-width: 1630px) {
+@media (min-width: 1147px) and (max-width: 1920px) {
     body::-webkit-scrollbar {
         background-color: #F3F7EC;
         display: none;

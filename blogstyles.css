@@ -256,7 +256,7 @@ body::-webkit-scrollbar {
     /* position: sticky; */
 }
 
-@media (min-width: 1147px) and (max-width: 1630px) {
+@media (min-width: 1147px) and (max-width: 1920px) {
     body::-webkit-scrollbar {
         background-color: #F3F7EC;
         display: none;
