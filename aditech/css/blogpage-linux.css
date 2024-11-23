@@ -207,6 +207,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.text-style {
+    color: #F09319;
+}
+
 .content-post-1 {
     border: 1px solid;
     padding: 50px 10px;
@@ -453,6 +457,10 @@ body::-webkit-scrollbar {
         display: none;
     }
     
+    .text-style {
+        color: #F09319;
+    }
+
     .content-post-1 {
         border: 1px solid;
         padding: 50px 10px;
@@ -722,6 +730,10 @@ body::-webkit-scrollbar {
 
     .content-post::-webkit-scrollbar {
         display: none;
+    }
+    
+    .text-style {
+        color: #F09319;
     }
 
     .content-post-1 {
@@ -1004,6 +1016,10 @@ body::-webkit-scrollbar {
         display: none;
     }
 
+    .text-style {
+        color: #F09319;
+    }
+
     .content-post-1 {
         border: 1px solid;
         padding: 35px 10px;
@@ -1283,6 +1299,10 @@ body::-webkit-scrollbar {
 
     .content-post::-webkit-scrollbar {
         display: none;
+    }
+
+    .text-style {
+        color: #F09319;
     }
 
     .content-post-1 {

@@ -130,6 +130,8 @@ body::-webkit-scrollbar {
 
 .h1-image {
     width: 60%;
+    /* border: 1px solid; */
+    /* box-shadow: 2px 2px; */
 }
 
 .container-content {
@@ -147,8 +149,24 @@ body::-webkit-scrollbar {
     padding-bottom: 5px;
 }
 
-.paragraf-content {
+.text-style {
     /* border: 1px solid; */
+    color: #F09319;
+}
+
+.paragraf-image {
+    /* border: 1px solid; */
+    margin: 30px;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.paragraf-content-li {
+    /* border: 1px solid; */
+    margin: 0px 20px;
 }
 
 .footer {
