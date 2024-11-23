@@ -526,9 +526,24 @@ body::-webkit-scrollbar {
         -o-transition: .5s ease;
     }
     
+    .h1-image {
+        width: 50%;
+        /* border: 1px solid; */
+        /* box-shadow: 2px 2px; */
+    }
+
+    .h2-content {
+        justify-content: right;
+        /* border: 1px solid; */
+        font-size: 16px;
+        padding-top: 30px;
+        padding-bottom: 5px;
+    }
+
     .content-nav {
         padding: 40px 40px 85px;
         font-family: Poppins;
+        font-size: 12px;
         height: 40%;
         display: flex;
         justify-content: center;
@@ -652,10 +667,19 @@ body::-webkit-scrollbar {
         -ms-transition: .5s ease;
         -o-transition: .5s ease;
     }
-    
+
+    .h2-content {
+        justify-content: right;
+        /* border: 1px solid; */
+        font-size: 13px;
+        padding-top: 30px;
+        padding-bottom: 5px;
+    }
+
     .content-nav {
-        padding: 40px 40px 95px;
+        padding: 40px 40px 120px;
         font-family: Poppins;
+        font-size: 9px;
         height: 40%;
         display: flex;
         justify-content: center;
