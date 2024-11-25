@@ -149,6 +149,10 @@ body::-webkit-scrollbar {
     padding-bottom: 5px;
 }
 
+.paragraf-content {
+    /* border: 1px solid; */
+}
+
 .text-style {
     /* border: 1px solid; */
     color: #F09319;
@@ -167,6 +171,7 @@ body::-webkit-scrollbar {
 .paragraf-content-li {
     /* border: 1px solid; */
     margin: 0px 20px;
+    list-style-position: inside;
 }
 
 .footer {
@@ -428,6 +433,7 @@ body::-webkit-scrollbar {
 
 @media (min-width: 481px) and (max-width: 768px) {
     body::-webkit-scrollbar {
+        background-color: #F3F7EC;
         display: none;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -441,6 +447,7 @@ body::-webkit-scrollbar {
         padding: 10px 10px;
         /* border: 1px solid; */
         height: 30%;
+        /* width: auto; */
         position: sticky;
         top: 0;
         overflow: hidden;
@@ -504,6 +511,7 @@ body::-webkit-scrollbar {
         width: 400px
         align-items center;
         height: auto;
+        /* border: 1px solid; */
     }
 
     .nav-con .nav-menu {
@@ -526,31 +534,73 @@ body::-webkit-scrollbar {
         -o-transition: .5s ease;
     }
     
+    .content-nav {
+        padding: 30px 0px 0px;
+        font-family: Poppins;
+        /* border: 1px solid; */
+    }
+    
+    .container {
+        /* border: 1px solid; */
+        padding: 20px 70px;
+        padding-bottom: 100px;
+        display: flex;
+        height: 40%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .h1-header {
+        text-align: center;
+        padding: 20px 0px;
+    }
+    
     .h1-image {
-        width: 50%;
+        width: 60%;
         /* border: 1px solid; */
         /* box-shadow: 2px 2px; */
     }
-
+    
+    .container-content {
+        /* border: 1px solid; */
+        width: 112%;
+        padding-top: 30px;
+        /* display: flex; */
+    }
+    
     .h2-content {
         justify-content: right;
         /* border: 1px solid; */
-        font-size: 16px;
+        font-size: 17px;
         padding-top: 30px;
         padding-bottom: 5px;
     }
-
-    .content-nav {
-        padding: 40px 40px 85px;
-        font-family: Poppins;
-        font-size: 12px;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        /* flex-direction: column; */
+    
+    .paragraf-content {
         /* border: 1px solid; */
+        font-size: 13px;
+    }
+    
+    .text-style {
+        /* border: 1px solid; */
+        color: #F09319;
+    }
+    
+    .paragraf-image {
+        /* border: 1px solid; */
+        margin: 30px;
+        width: 45%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    
+    .paragraf-content-li {
+        /* border: 1px solid; */
+        margin: 0px 0px;
+        font-size: 13px;
+        list-style-position: inside;
     }
 
     .footer {
@@ -668,25 +718,74 @@ body::-webkit-scrollbar {
         -o-transition: .5s ease;
     }
 
+    .content-nav {
+        padding: 30px 0px 0px;
+        font-family: Poppins;
+        /* border: 1px solid; */
+    }
+    
+    .container {
+        /* border: 1px solid; */
+        padding: 20px 30px;
+        padding-bottom: 100px;
+        display: flex;
+        height: 40%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .h1-header {
+        text-align: center;
+        padding: 20px 0px;
+        font-size: 25px;
+    }
+    
+    .h1-image {
+        width: 90%;
+        /* border: 1px solid; */
+        /* box-shadow: 2px 2px; */
+    }
+    
+    .container-content {
+        /* border: 1px solid; */
+        width: 112%;
+        padding-top: 30px;
+        /* display: flex; */
+    }
+    
     .h2-content {
         justify-content: right;
         /* border: 1px solid; */
-        font-size: 13px;
+        font-size: 17px;
         padding-top: 30px;
         padding-bottom: 5px;
     }
-
-    .content-nav {
-        padding: 40px 40px 120px;
-        font-family: Poppins;
-        font-size: 9px;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        /* flex-direction: column; */
+    
+    .paragraf-content {
         /* border: 1px solid; */
+        font-size: 13px;
+    }
+    
+    .text-style {
+        /* border: 1px solid; */
+        color: #F09319;
+    }
+    
+    .paragraf-image {
+        /* border: 1px solid; */
+        margin: 30px;
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    
+    .paragraf-content-li {
+        /* border: 1px solid; */
+        margin: 0px 10px;
+        font-size: 13px;
+        list-style-position: inside;
     }
     
     .footer {
