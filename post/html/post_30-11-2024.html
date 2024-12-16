@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../image/Logo.png">
+    <link rel="stylesheet" href="../css/post_standar_template.css">
+    <title>Cara membuat VM dengan virt-manager</title>
+</head>
+<body>
+    <header class="nav">
+        <div class="logo-con">
+            <img class="logo" src="../../image/Logo.png" alt="image logo aditech">
+            <div class="logo-overlay">
+                <p class="logo-text">
+                    <a class="logo-text-a" href="../../index.html">Hi!</a>
+                </p>
+            </div>
+        </div>
+        <div class="nav-con">
+            <a class="nav-menu" href="/aditech/html/blogpage.html">Blog</a>
+            <a class="nav-menu" href="/aditech/html/contactpage.html">Contact</a>
+        </div>
+    </header>
+    <div class="content-nav">
+        <div class="container">
+            <h1 class="h1-header">Cara membuat VM dengan virt-manager</h1>
+            <img class="h1-image" src="/post/images/image-post-2.png" alt="virt-manager.png">
+            <div class="container-content">
+                <!-- <h2 class="h2-content">Merujuk dari web dokumentasinya</h2> -->
+                <p class="paragraf-content">
+                    Dengan menggunakan virt-manager kita bisa lebih mudah dalam membuat sebuah VM karena tampilan UI-nya mudah dipahami.
+                    Kita bisa mengatur alokasi disk, memilih OS, mengelola virtual hardware, dan mengatur penyesuaian lainnya sebelum 
+                    membuat VM. Ada 4 cara yang disediakan virt-manager dan dapat dipilih dalam membuat VM.
+                    Pada blog kali ini saya akan mengajak kalian untuk membuat VM dengan 4 cara yang disediakan oleh virt-manager. Pastikan
+                    host/laptop/PC kalian sudah terinstal package KVM dan virt-manager. Cek juga perangkat yang kalian gunakan sudah 
+                    kompatibel untuk divirtualisasi. Gasss, kita mulai saja!
+                </p>
+                <h2 class="h2-content">Cara Pertama: Local install media (ISO image or CDROM)</h2>
+                <p class="paragraf-content">
+                    Untuk cara yang pertama ini kita memerlukan CD-ROM, DVD, atau ISO image dari OS yang akan diinstal pada VM. Langkah-langkahnya
+                    adalah sebagai berikut:
+                </p>
+                <ol>
+                    <li class="paragraf-content-li">Buka desktop atau aplikasi virt-manager</li>
+                    <li class="paragraf-content-li">
+                        Klik tombol ikon monitor kecil pada pojok kiri atas di bawah tulisan File
+                        <img src="../images/image-post-2_1.png" alt="desktop_virt-manager.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Pilih opsi pertama pada pilihan yang disediakan, selanjutnya klik Forward
+                        <img src="../images/image-post-2_2.png" alt="Local_install_media_(ISO_image_or_CDROM).png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Setelah itu kita bisa memilih dan memasukan ISO image dari OS yang akan diinstal pada VM.
+                        Pastikan sudah mendownload ISO image dari OS yang diinginkan. Disini saya 
+                        menggunakan ISO image dari OS Ubuntu 18. Jika sudah, lanjut klik Forward.
+                        <q class="paragraf-content-quotes">
+                            Ketika file ISO image sudah dimasukan ke dalam virt-manager, biasanya 
+                            virt-manager akan mendeteksi OS dari file ISO image secara otomatis.
+                            Jadi kita bisa mengetahui, bahwa kita sudah memasukan file ISO image 
+                            dari OS yang sesuai dengan keinginan kita.
+                        </q>
+                        <img src="../images/image-post-2_3.png" alt="ISO_image_Ubuntu_18.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Kita juga bisa mengecek apakah file ISO yang sudah didownload itu benar-benar OS yang dipilih.
+                        <p class="paragraf-content">
+                            Caranya dengan menjalankan perintah berikut:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            $ osinfo-detect ubuntu-18.04.6-desktop-amd64.iso
+                        </code>
+                        <p class="paragraf-content">
+                            Output dari perintah di atas:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            Media is bootable.
+                            Media is an installer for OS 'Ubuntu 18.04 LTS (x86_64)'
+                            Media is live media for OS 'Ubuntu 18.04 LTS (x86_64)'
+                        </code>
+                        <p class="paragraf-content">
+                            Atau bisa juga dengan perintah di bawah ini:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            $ file ubuntu-18.04.6-desktop-amd64.iso
+                        </code>
+                        <p class="paragraf-content">
+                            Output dari perintah di atas:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            ubuntu-18.04.6-desktop-amd64.iso: ISO 9660 CD-ROM filesystem data (DOS/MBR boot sector) 'Ubuntu 18.04.6 LTS amd64' (bootable)
+                        </code>
+                    </li>
+                    <li class="paragraf-content-li">
+                        Kemudian kita bisa menentukan jumlah memory, CPU, dan juga disk untuk VM
+                        yang akan dibuat. Atau kalian juga dapat membuat kustomisasi disk sendiri. 
+                        Di sini saya memilih konfigurasi yang mudah saja, mungkin di blog selanjutnya
+                        saya akan membahas tentang kustomisasi disk pada virt-manager. Jika sudah
+                        menentukan jumlah memory, CPU, dan disk. Lanjut dengan klik Forward.
+                        <img src="../images/image-post-2_4.png" alt="Jumlah_memory&CPU.png" class="paragraf-image">
+                        <img src="../images/image-post-2_5.png" alt="Jumlah_disk.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Selanjutnya kita bisa memberi nama pada VM yang akan dibuat. Disini juga
+                        kita diberi preview spesifikasi dari VM yang akan dibuat. Klik Finish untuk
+                        memulai installasi.
+                        <img src="../images/image-post-2_6.png" alt="Preview_VM.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Konfigurasi installasi VM sesuai keinginan kalian. proses installasi VM 
+                        sekitar 5-10 menit. Jika sudah akan muncul tampilan dari VM yang sedang berjalan
+                        pada virt-manager. Pembuatan VM dengan cara pertama sudah selesai.
+                        <img src="../images/image-post-2_7.png" alt="Tampilan_VM_berjalan.png" class="paragraf-image">
+                        <img src="../images/image-post-2_8.png" alt="hostnamectl.png" class="paragraf-image">
+                    </li>
+                </ol>
+                <h2 class="h2-content">Cara Kedua: Network Install (HTTP, HTTPS, or FTP)</h2>
+                <p class="paragraf-content">
+                    Pada cara ini, kita hanya memerlukan URL dari OS yang diinginkan untuk membuat VM.
+                    Di dalam URL tersebut, sudah disediakan file untuk installasi OS dan paket-paket yang
+                    yang dibutuhkan. Contohnya disini saya akan menginstall VM dengan OS Rocky Linux menggunakan
+                    cara ini.
+                </p>
+                <p class="paragraf-content">
+                    URL install Rocky Linux:
+                    <br>
+                    <a href="https://dl.rockylinux.org/vault/rocky/9.3/BaseOS/x86_64/os/">https://dl.rockylinux.org/vault/rocky/9.3/BaseOS/x86_64/os/</a>
+                </p>
+                <ol>
+                    <li class="paragraf-content-li">
+                        Untuk membuat VM dengan cara ini, pilih opsi kedua dari pilihan yang disediakan, selanjutnya
+                        klik Forward
+                        <img src="../images/image-post-2_9.png" alt="Network_install.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Tambahkan URL dari OS yang diinginkan, contohnya saya menggunakan Rocky Linux. Lanjut klik Forward
+                        <img src="../images/image-post-2_10.png" alt="URL_Rocky_linux.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Kemudian atur jumlah memory, CPU, disk, dan nama untuk VM yang akan dibuat. Jika sudah klik Finish
+                        <img src="../images/image-post-2_11.png" alt="Memory_&_CPU.png" class="paragraf-image">
+                        <img src="../images/image-post-2_12.png" alt="Disk.png" class="paragraf-image">
+                        <img src="../images/image-post-2_13.png" alt="Preinstall_Rocky.png" class="paragraf-image">
+                        <img src="../images/image-post-2_14.png" alt="Process_install.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Tunggu proses installasinya sekitar 5-10 menit
+                        <img src="../images/image-post-2_15.png" alt="Installasi_Rocky.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Setelah proses installasi selesai, akan muncul tampilan pengaturan seperti di bawah ini. Teman-teman bisa mengikuti
+                        instruksi/panduan yang disediakan Rocky Linux
+                        <img src="../images/image-post-2_16.png" alt="Preference_Rocky.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Dan VM dengan distro Rocky Linux sudah berjalan
+                        <img src="../images/image-post-2_17.png" alt="Rocky_linux.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Berikut referensi beberapa URL untuk membuat VM dengan distro OS lainnya:
+                        <p class="paragraf-content">
+                            - <a href="https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/">URL centos-9-stream</a>
+                        </p>
+                        <p class="paragraf-content">
+                            - <a href="https://deb.debian.org/debian/dists/stable/main/installer-amd64/">URL debian</a>
+                        </p>
+                        <p class="paragraf-content">
+                            - <a href="http://download.opensuse.org/distribution/leap/15.5/repo/oss/">URL opensuse</a>
+                        </p>
+                        <p class="paragraf-content">
+                            - <a href="https://mirror.rackspace.com/archlinux/iso/latest/">URL archlinux</a>
+                        </p>
+                    </li>
+                </ol>
+                <h2 class="h2-content">Cara Ketiga: Import existing disk image</h2>
+                <p class="paragraf-content">
+                    Untuk cara ini, kita bisa membuat VM baru dengan mengimport disk yang sudah ada. Baik itu dari disk
+                    yang sudah digunakan untuk membuat VM atau disk baru tetapi belum digunakan sama sekali.
+                    Dengan kata lain, kita bisa memanfaatkan disk yang sudah kita miliki untuk membuat VM baru.
+                    Kita juga bisa mengustomisasi disk yang sudah ada dengan menginstall paket, membuat file, menambahkan user, 
+                    dll. Berikut Langkah-langkah pembuatan VM dengan cara ketiga:
+                </p>
+                <ol>
+                    <li class="paragraf-content-li">
+                        Langkah pertama, jika teman-teman sudah memiliki disk atau cloud image dari pembuatan
+                        VM sebelumnya, dengan cara ketiga ini kita bisa menggunakan disknya lagi.
+                        Disini saya akan memberi contoh dengan menggunakan disk image baru dari OS Ubuntu
+                        Bionic, lalu saya akan membuat salinan dari disk tersebut. Tidak lupa juga, saya akan
+                        melakukan sedikit kustomisasi pada salinan disk Ubuntu Bionic dengan menambahkan beberapa
+                        konfigurasi.
+                        <p class="paragraf-content">
+                            - Membuat salinan disk image, caranya seperti berikut:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            $ sudo qemu-img create -b /var/lib/libvirt/images/bionic-server-cloudimg-amd64.img -f qcow2 -F qcow2 /var/lib/libvirt/images/ubuntu18.img 15G
+                        </code>
+                        <code class="paragraf-content-snippet-code">
+                            ###Output dari perintah diatas###
+                            Formatting 'ubuntu18.img', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=16106127360 backing_file=bionic-server-cloudimg-amd64.img backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16
+
+                            ###Cek informasi dari disk tersebut###
+                            $ file /var/lib/libvirt/images/ubuntu18.img
+                            ubuntu18.img: QEMU QCOW2 Image (v3), has backing file (path bionic-server-cloudimg-amd64.img), 16106127360 bytes
+                        </code>
+                        <p class="paragraf-content">
+                            - Untuk kustomisasi disk, saya menggunakan tools <b class="text-style">virt-customize</b>. Berikut
+                            syntax dari perintahnya:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            $ sudo virt-customize -a /var/lib/libvirt/images/ubuntu18.img --update --run custom-script.sh
+                        </code>
+                        <code class="paragraf-content-snippet-code">
+                            ###Output dari perintah diatas###
+                            [   0.0] Examining the guest ...
+                            [   4.5] Setting a random seed
+                            virt-customize: warning: random seed could not be set for this type of 
+                            guest
+                            [   4.6] Setting the machine ID in /etc/machine-id
+                            [   4.6] Updating packages
+                            [  46.7] Running: custom-script.sh
+                            [  61.2] Finishing off
+                        </code>
+                        <p class="paragraf-content">
+                            - Kustomisasi disk yang saya tambahkan antara lain seperti membuatkan user,
+                            menginstall package, dll. Instruksi kustom saya tuliskan di dalam script dengan
+                            nama <i>custom-script.sh</i>, file yang berisi script kustom tersebut akan dieksekusi
+                            setelah tools <b class="text-style">virt-customize</b> melakukan update packages. 
+                            Berikut isi dari file <i>custom-script.sh</i>:
+                        </p>
+                        <code class="paragraf-content-snippet-code">
+                            #!/bin/bash
+
+                            ## Create and add user
+                            mkdir -p /home/zero/.ssh
+                            useradd zero -d /home/zero -s /bin/bash
+                            echo "zero:zero123"|chpasswd
+                            echo "zero      ALL=(ALL)       NOPASSWD:ALL" | tee /etc/sudoers.d/zero
+                            echo "root:root123"|chpasswd
+                                                    
+                            ## Installing package
+                            apt-get install apache2 -y
+                            apt-get install openssh-server -y
+                                                    
+                            ## Configure service apache2
+                            mkdir -p /var/www/html/
+                            echo "knock knock ubuntu!" > /var/www/html/index.html
+                            chmod 777 /var/www/html/index.html
+                        </code>
+                    </li>
+                    <li class="paragraf-content-li">
+                        Langkah kedua, setelah menyiapkan disk, lanjut pada proses pembuatan VM. Pada menu virt-manager pilih opsi ketiga dari pilihan yang disediakan. 
+                        Selanjutnya klik Forward
+                        <img src="../images/image-post-2_18.png" alt="Existing_disk.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Ketiga, tambahkan disk image yang sudah dimodifikasi tadi, lalu pilih OS dari disk image tersebut.
+                        Jika sudah klik Forward
+                        <img src="../images/image-post-2_19.png" alt="Pilih_Disk_modifikasi.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Kemudian atur jumlah memory, CPU, disk, dan nama untuk VM yang akan dibuat. Jika sudah klik Finish
+                        <img src="../images/image-post-2_20.png" alt="Atur_memory&cpu.png" class="paragraf-image">
+                        <img src="../images/image-post-2_21.png" alt="Atur_nama_VM.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Tunggu proses installasinya sekitar 1-2 menit
+                        <img src="../images/image-post-2_22.png" alt="Installasi.png" class="paragraf-image">
+                    </li>
+                    <li class="paragraf-content-li">
+                        Dan akhirnya VM pun sudah jadi, kalian bisa melakukan pengecekan apakah konfigurasi atau kustom yang sudah diterapkan
+                        ke dalam VM itu terinstall atau tidak. Di sini saya akan mencoba melakukan pengecekan dengan melakukan login ke dalam VM
+                        dengan user yang sudah ditentukan di dalam script dan lanjut cek package apache2
+                        <img src="../images/image-post-2_23.png" alt="Zero_login.png" class="paragraf-image">
+                        <img src="../images/image-post-2_24.png" alt="Cek_apache2.png" class="paragraf-image">
+                        <img src="../images/image-post-2_25.png" alt="Cek_openssh.png" class="paragraf-image">
+                        <img src="../images/image-post-2_26.png" alt="Cek_service_apache2.png" class="paragraf-image">
+                        <img src="../images/image-post-2_27.png" alt="Curl_localhost" class="paragraf-image">
+                    </li>
+                </ol>
+                <h2 class="h2-content">Cara Keempat: Manual install</h2>
+                <p class="paragraf-content">
+                    Dengan memilih cara keempat yaitu Manual install, kita dapat membuat VM terlebih dahulu meskipun belum memiliki
+                    media installasi seperti ISO image atau media lainnya. Perlu diingat juga sebelum melakukan booting ke VM, kita 
+                    harus sudah menambahkan ISO agar bisa melakukan installasi. Lebih lanjutnya kalian bisa mengikuti langkah-langkah
+                    berikut ini:
+                    <ol>
+                        <li class="paragraf-content-li">
+                            Langkah pertama, pilih opsi keempat atau terakhir dari menu virt-manager. Selanjutnya klik Forward
+                            <img src="../images/image-post-2_28.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Langkah kedua, pilih OS yang akan diinstall(Ini hanya memilih OS saja, langkah ini tidak akan melakukan penginstallan ISO OS).
+                            Disini saya memilih Ubuntu 18
+                            <img src="../images/image-post-2_29.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Kemudian atur jumlah memory, CPU, disk, dan nama untuk VM yang akan dibuat. Jika sudah klik Finish
+                            <img src="../images/image-post-2_30.png" alt="opsi_manual_install" class="paragraf-image">
+                            <img src="../images/image-post-2_31.png" alt="opsi_manual_install" class="paragraf-image">
+                            <q class="paragraf-content-quotes">
+                                Catatan, dibagian seperti gambar di bawah ini, checklist menu Customize configuration before install
+                            </q>
+                            <img src="../images/image-post-2_32.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Setelah itu, kalian akan melihat menu seperti gambar di bawah ini. Langkah selanjutnya, kita akan menambahkan disk yang berisi file ISO 
+                            dari OS yang sudah ditentukan. Untuk caranya pertama klik tombol <i>Add Hardware</i> di sebelah kiri bawah.
+                            <img src="../images/image-post-2_33.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Kemudian, pilih menu <i>Storage</i> dan checklist di bagian <i>Select or create custom storage</i>, lalu klik <i>Manage</i>
+                            <img src="../images/image-post-2_34.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Pilih file ISO untuk dijadikan disk dan juga agar VM bisa melakukan booting, selanjutnya klik <i>Choose Volume</i>
+                            <img src="../images/image-post-2_35.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Pada bagian <i>Device type</i>, pilih CDROM device, lalu klik Finish
+                            <img src="../images/image-post-2_36.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Masuk pada bagian <i>Boot Options</i>, checklist SATA CDROM agar VM dapat melakukan booting ke OS Ubuntu 18, terus klik Apply
+                            <img src="../images/image-post-2_37.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Lanjut klik tombol <i>Begin Installation</i> pada bagian kiri atas dari gambar di bawah ini
+                            <img src="../images/image-post-2_38.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Setelah itu lakukan konfigurasi untuk mengatur setingan VM sesuai keinginnan kalian, jika sudah tunggu proses installasi VM sekitar 1-5 menit
+                            <img src="../images/image-post-2_39.png" alt="opsi_manual_install" class="paragraf-image">
+                            <img src="../images/image-post-2_40.png" alt="opsi_manual_install" class="paragraf-image">
+                            <img src="../images/image-post-2_41.png" alt="opsi_manual_install" class="paragraf-image">
+                            <img src="../images/image-post-2_42.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Jika installasi VM sudah selesai biasanya terdapat tombol untuk melakukan <i>reboot</i>. Tekan tombol <i>reboot</i> pada VM, selanjutnya
+                            kita bisa menghentikan operasi VM atau shutdown terlebih dahulu. Karena kita perlu menghapus disk ISO yang sudah digunakan menjadi bootable,
+                            agar kita bisa mengakses atau login ke dalam VM. Jika disk ISO tidak dihapus, maka akan terjadi looping dan kembali mengulangi proses installasi VM. 
+                            Kita bisa menghentikan operasi VM dengan cara menekan tombol shutdown atau Force Off(secara paksa).
+                            <img src="../images/image-post-2_49.png" alt="opsi_manual_install" class="paragraf-image">
+                            <img src="../images/image-post-2_43.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Kemudian, masuk ke menu detail pada VM, pilih menu <i>SATA CDROM 1</i>, lalu klik tombol <i>Remove</i> pada bagian kanan bawah.
+                            Jika kalian ingin sekalian menghapus file ISO pada laptop, kalian bisa checklist menu <i>Delete associated storage files</i>. Disini saya hanya
+                            ingin menghapus disk ISOnya saja. Jadi saya tidak menchecklist menu tersebut. Setelah itu klik Delete
+                            <img src="../images/image-post-2_44.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Pastikan pada menu <i>Boot Options</i>, opsi disk yang tadi tidak dicheklist, menjadi terchecklist. Fungsinya agar kita bisa booting
+                            ke dalam VM yang sudah dibuat, lanjut klik Apply
+                            <img src="../images/image-post-2_45.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Klik tombol Play/Power On/Segitiga pada bagian atas. Untuk menghidupkan VM
+                            <img src="../images/image-post-2_46.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Tunggu proses booting. Jika sudah muncul tampilan seperti gambar di bawah ini, kalian bisa login dengan 
+                            user yang sudah dibuat pada saat proses installasi VM. Disini saya login dengan kredensial sebagai berikut
+                            <code class="paragraf-content-snippet-code">
+                                username: manual
+                                password: man123
+                                *ini hanya untuk contoh jangan sesekali menggunakan kombinasi password seperti yang di atas.
+                            </code>
+                            <img src="../images/image-post-2_47.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                        <li class="paragraf-content-li">
+                            Dan akhirnya VM pun sudah bisa berjalan
+                            <img src="../images/image-post-2_48.png" alt="opsi_manual_install" class="paragraf-image">
+                        </li>
+                    </ol>
+                    <h2 class="h2-content">Referensi</h2>
+                    <ul>
+                        <li class="paragraf-content-li"><a href="https://sysguides.com/create-virtual-machines-in-kvm-virt-manager">https://sysguides.com/create-virtual-machines-in-kvm-virt-manager</a></li>
+                        <li class="paragraf-content-li"><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/virtualization_host_configuration_and_guest_installation_guide/chap-virtualization_host_configuration_and_guest_installation_guide-guest_installation_virt_manager-creating_guests_with_virt_manager#chap-Virtualization_Host_Configuration_and_Guest_Installation_Guide-Guest_Installation_Virt_Manager-Creating_guests_with_virt_manager">https://docs.redhat.com/guide-guest_installation_virt_manager-creating_guests_with_virt_manager</a></li>
+                        <li class="paragraf-content-li"><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/configuring_and_managing_cloud-init_for_rhel_8/index#creating-a-vm-that-includes-cloud-init-for-a-nocloud-datasource_configuring-cloud-init">https://docs.redhat.com/configuring_and_managing_cloud-init_for_rhel_8</a></li>
+                        <li class="paragraf-content-li"><a href="https://sumit-ghosh.com/posts/create-vm-using-libvirt-cloud-images-cloud-init/">https://sumit-ghosh.com/posts/create-vm-using-libvirt-cloud-images-cloud-init/</a></li>
+                        <li class="paragraf-content-li"><a href="https://sysguides.com/install-kvm-on-linux">https://sysguides.com/install-kvm-on-linux</a></li>
+                        <li class="paragraf-content-li"><a href="https://cloudinit.readthedocs.io/en/latest/reference/examples.html">https://cloudinit.readthedocs.io/en/latest/reference/examples.html</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../js/copyFunction.js"></script> -->
+    <footer class="footer">
+        <p>&copy;2024 Muhammad Aditiya Rakhman | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
