@@ -152,6 +152,7 @@ body::-webkit-scrollbar {
 
 .paragraf-content {
     /* border: 1px solid; */
+    overflow-wrap: break-word;
     font-size: 17px;
     margin-bottom: 10px;
 }
@@ -173,6 +174,7 @@ body::-webkit-scrollbar {
 .paragraf-content-li {
     /* border: 1px solid; */
     /* display: block; */
+    overflow-wrap: break-word;
     font-size: 17px;
     margin: 5px 0px;
     list-style-position: inside;
